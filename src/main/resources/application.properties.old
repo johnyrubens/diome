@@ -1,5 +1,3 @@
-server:
-  port: 8000
 spring:
   datasource:
     url: jdbc:h2:mem:credit_application_system_db
@@ -19,4 +17,5 @@ spring:
     user:
       name: user
       password: user123
-      roles: USER
+      roles:USER
+
