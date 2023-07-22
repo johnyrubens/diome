@@ -16,7 +16,7 @@ class CreditService(
         credit.apply {
             customer = customerService.findById(credit.customer?.id!!)
         }
-        return this.save(credit)
+        return this.creditRepository.save(credit)
     }
 
     override fun findAllByCustomer(customerId: Long): List<Credit> {

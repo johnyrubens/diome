@@ -8,4 +8,6 @@ interface ICustomerService {
     fun findById(id: Long) : Customer
 
     fun delete(id: Long)
+
+    fun findByCpf(cpf: String) : Int
 }

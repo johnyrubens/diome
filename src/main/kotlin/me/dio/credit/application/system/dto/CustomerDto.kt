@@ -1,13 +1,14 @@
 package me.dio.credit.application.system.dto
 
+import jakarta.validation.constraints.NotEmpty
 import me.dio.credit.application.system.entity.Address
 import me.dio.credit.application.system.entity.Customer
 import java.math.BigDecimal
 
 data class CustomerDto (
-        val firstName: String,
+        @field:NotEmpty(message = "campo firtName não pode ser sem valor") val firstName: String,
         val lastName: String,
-        val cpf: String,
+        @field:NotEmpty(message = "campo cpf não pode estar em branco") val cpf: String,
         val income: BigDecimal,
         val email: String,
         val password: String,
